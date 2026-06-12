@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Taking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>📝 Notes Taking App</h1>
+
+        <div class="note-form">
+            <input type="text" id="title" placeholder="Enter Note Title">
+
+            <select id="category">
+                <option value="Personal">📂 Personal</option>
+                <option value="Study">📚 Study</option>
+                <option value="Work">💼 Work</option>
+                <option value="Ideas">💡 Ideas</option>
+            </select>
+
+            <input type="text" id="tags" placeholder="Enter Tags (e.g. #js, #important)">
+
+            <div class="toolbar">
+                <button type="button" onclick="formatText('bold')"><b>B</b></button>
+                <button type="button" onclick="formatText('italic')"><i>I</i></button>
+                <button type="button" onclick="formatText('underline')"><u>U</u></button>
+            </div>
+
+            <div id="noteContent" class="editor" contenteditable="true">
+                Write your note here...
+            </div>
+
+            <button id="saveBtn">Save Note</button>
+        </div>
+
+        <h2>📋 My Notes</h2>
+        <div id="notesContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
